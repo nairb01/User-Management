@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-12 text-end">
+    <button class="btn btn-success" routerLink="/createUser">Add New</button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Sr no</th>
+          <th>Name</th>
+          <th>Email id</th>
+          <th>Mobile no</th>
+          <th>AddressLine1</th>
+          <th>AddressLine2</th>
+          <th>City</th>
+          <!-- <th>Profile pic</th> -->
+          <th>Action</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        @for (item of userList; track $index){<tr>
+          <td>{{ $index + 1 }}</td>
+          <td>{{ item.fullName }}</td>
+          <td>{{ item.emailId }}</td>
+          <td>{{ item.mobileNo }}</td>
+          <td>{{ item.addressLine1 }}</td>
+          <td>{{ item.addressLine2 }}</td>
+          <td>{{ item.city }}</td>
+          <!-- <td> {{ item.profilePicUrl}} </td> -->
+          <td>
+
+            <button (click)="onDelete(item.id)" class="btn btn-danger">Delete</button>
+          </td>
+
+        </tr>}
+      </tbody>
+    </table>
+  </div>
+</div>

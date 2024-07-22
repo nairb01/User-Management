@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "userId": 1,
+      "fullName": "Brian",
+      "emailId": "admin@gmail.com",
+      "mobileNo": "4567",
+      "addressLine1": "koma",
+      "addressLine2": "koma",
+      "city": "Nairobi",
+      "profilePicUrl": "",
+      "role": "Admin",
+      "password": "41197436",
+      "id": "f40a"
+    },
+    {
+      "id": "1e0c",
+      "fullName": "Dan",
+      "emailId": "Dan@gmail.com",
+      "mobileNo": "1234",
+      "addressLine1": "California",
+      "addressLine2": "California ",
+      "city": "DC",
+      "profilePicUrl": "Hello",
+      "role": "User",
+      "password": "1234"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+<!-- <div class="container">
+  <div class="screen">
+    <div class="screen__content">
+      <form class="login">
+        <div class="login__field">
+          <i class="login__icon fas fa-user"></i>
+          <input
+            type="text"
+            name="EmailId"
+            [(ngModel)]="logObj.EmailId"
+            class="login__input"
+            placeholder="User name / Email"
+          />
+        </div>
+        <div class="login__field">
+          <i class="login__icon fas fa-lock"></i>
+          <input
+            type="password"
+            name="Password"
+            [(ngModel)]="logObj.Password"
+            class="login__input"
+            placeholder="Password"
+          />
+        </div>
+        <button class="button login__submit" (click)="login()">
+          <span class="button__text">Log In Now</span>
+          <i class="button__icon fas fa-chevron-right"></i>
+        </button>
+      </form>
+      <div class="social-login">
+        <h3>log in via</h3>
+        <div class="social-icons">
+          <a href="#" class="social-login__icon fab fa-instagram"></a>
+          <a href="#" class="social-login__icon fab fa-facebook"></a>
+          <a href="#" class="social-login__icon fab fa-twitter"></a>
+        </div>
+      </div>
+    </div>
+    <div class="screen__background">
+      <span class="screen__background__shape screen__background__shape4"></span>
+      <span class="screen__background__shape screen__background__shape3"></span>
+      <span class="screen__background__shape screen__background__shape2"></span>
+      <span class="screen__background__shape screen__background__shape1"></span>
+    </div>
+  </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+  <div class="left">
+    <div class="header">
+      <h2 class="animation a1">Welcome Back</h2>
+      <h4 class="animation a2">Log in to your account using email and password</h4>
+    </div>
+    <div class="form">
+      <input type="email" class="form-field animation a3" [(ngModel)]="logObj.EmailId"  placeholder="Email Address">
+      <input type="password" class="form-field animation a4" [(ngModel)]="logObj.Password" placeholder="Password">
+      <p class="animation a5"><a href="#">Forgot Password</a></p>
+      <button class="button login__submit" (click)="login()">
+        <span class="animation a6">Log In Now</span>
+        <i class="button__icon fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+  <div class="right"></div>
+</div>

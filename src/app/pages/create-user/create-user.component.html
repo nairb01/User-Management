@@ -1,0 +1,75 @@
+<div class="row">
+  <div class="col-12">
+    <div class="container">
+      <form [formGroup]="userForm" (ngSubmit)="createUser()" class="g-3 needs-validation" novalidate>
+        <div class="row">
+          <div class="col-md-4">
+            <label for="fullName" class="form-label">Full name</label>
+            <input type="text" class="form-control" id="fullName" formControlName="fullName" required />
+            <div *ngIf="userForm.get('fullName')?.invalid && userForm.get('fullName')?.touched" class="invalid-feedback">
+              Please enter a full name.
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <label for="emailId" class="form-label">Email</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend">&#64;</span>
+              <input type="email" class="form-control" id="emailId" formControlName="emailId" required />
+              <div *ngIf="userForm.get('emailId')?.invalid && userForm.get('emailId')?.touched" class="invalid-feedback">
+                Please enter a valid email.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="mobileNo" class="form-label">Mobile no</label>
+            <input type="text" class="form-control" id="mobileNo" formControlName="mobileNo" required />
+            <div *ngIf="userForm.get('mobileNo')?.invalid && userForm.get('mobileNo')?.touched" class="invalid-feedback">
+              Please provide a valid Mobile no.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="city" class="form-label">City</label>
+            <input type="text" class="form-control" id="city" formControlName="city" required />
+            <div *ngIf="userForm.get('city')?.invalid && userForm.get('city')?.touched" class="invalid-feedback">
+              Please provide a valid city.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="text" class="form-control" id="password" formControlName="password" required />
+            <div *ngIf="userForm.get('password')?.invalid && userForm.get('password')?.touched" class="invalid-feedback">
+              Please provide a strong password.
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="addressLine1" class="form-label">Address Line 1</label>
+            <textarea class="form-control" id="addressLine1" formControlName="addressLine1" required></textarea>
+            <div *ngIf="userForm.get('addressLine1')?.invalid && userForm.get('addressLine1')?.touched" class="invalid-feedback">
+              Please provide a valid Address.
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="addressLine2" class="form-label">Address Line 2</label>
+            <textarea class="form-control" id="addressLine2" formControlName="addressLine2" required></textarea>
+            <div *ngIf="userForm.get('addressLine2')?.invalid && userForm.get('addressLine2')?.touched" class="invalid-feedback">
+              Please provide a valid Address.
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <label for="profilePicUrl" class="form-label">Profile Pic Url</label>
+            <textarea class="form-control" id="profilePicUrl" formControlName="profilePicUrl" [disabled]="!isProfilePicEditable"></textarea>
+          </div>
+        </div>
+        <div class="col-12 pt-3">
+          <button class="btn btn-primary" type="submit" *ngIf="isAdmin">Create User</button>
+          <button class="btn btn-primary" type="button" (click)="updateProfilePic()" *ngIf="isProfilePicEditable && !isAdmin">Update Profile Picture</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
